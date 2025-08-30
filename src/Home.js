@@ -21,11 +21,12 @@ function Home() {
       {/* Navbar */}
       <nav className="navbar">
         <div className="logo">
-          {/* Use lowercase filenames matching the public folder */}
           <img src="/images/tenalearn.png" alt="AI Boost" className="logo-img" />
-          <span>TENALEARN</span>
+          <span className="logo-text">TENALEARN</span>
         </div>
-        <div className="hamburger">&#9776;</div>
+        <div className="hamburger" onClick={() => document.querySelector(".nav-links").classList.toggle("active")}>
+          &#9776;
+        </div>
         <ul className="nav-links">
           <li><a href="#features">Features</a></li>
           <li><a href="#cta">Get Started</a></li>
