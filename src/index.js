@@ -4,8 +4,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import RootLayout from './RootLayout';
 
 import Home from './Home';
-import StudyPacks from './StudyPacks';
-import PackDetail from './PackDetail';
+
 import BuyNow from './BuyNow';
 import AnanseLab from './AnanseLab';
 import ErrorPage from "./ErrorPage"; 
@@ -16,8 +15,8 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { path: '/', element: <Home /> },
-      { path: '/study-packs', element: <StudyPacks /> },
-      { path: '/study-packs/:packId', element: <PackDetail /> },
+    
+      
       { path: '/buy-now', element: <BuyNow /> },
       { path: '/ananselab', element: <AnanseLab /> }
     ],
