@@ -124,50 +124,54 @@ section {
 .btn-primary {
   display: inline-block;
   padding: 0.7rem 1.5rem;
-  background: #fbbf24;
-  color: #1e3a8a;
+  background-color: #007bff;
+  color: #fff;
   border-radius: 5px;
   text-decoration: none;
-  transition: 0.3s;
-  font-weight: bold;
+  margin-top: 1rem;
 }
 
 .btn-primary:hover {
   background: #f59e0b;
 }
 
+
 /* Features Section */
 .features {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 4rem 5%;
-  flex-wrap: wrap;
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
-.feature {
-  background: #fff;
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.feature-card {
+  background: #f9f9f9;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  flex: 1;
-  min-width: 250px;
-  max-width: 300px;
-  text-align: center;
-  transition: transform 0.3s;
+  text-align: left;
+  transition: transform 0.3s ease;
 }
-
-.feature:hover {
-  transform: translateY(-8px);
+.feature-card:hover {
+  transform: translateY(-5px);
 }
-
-.feature h3 {
+.feature-icon {
+  font-size: 2rem;
   margin-bottom: 1rem;
-  color: #1e3a8a;
 }
-
-.feature p {
-  margin-bottom: 1rem;
+.feature-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /* Call to Action */
@@ -700,3 +704,79 @@ select {
   font-size: 1.2em;
 }
 
+/* Features Section */
+.features {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  height: 500px; /* You can adjust this */
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+}
+
+.feature-icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.feature-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.feature-link {
+  color: #4e9cff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.feature-link:hover {
+  color: #2f73c3;
+}
+.feature-img {
+  width: auto;
+  max-width: 200px;
+  height: 200%;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
