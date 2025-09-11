@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Auth from "./pages/Auth";
+import Courses from "./pages/Courses";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -16,6 +17,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />        {/* / */}
           <Route path="about" element={<About />} />   {/* /about */}
+          <Route path="courses" element={<Courses />} /> {/* /courses */}
           <Route path="contact" element={<Contact />} /> {/* /contact */}
           <Route path="auth" element={<Auth />} />       {/* /auth */}
         </Route>

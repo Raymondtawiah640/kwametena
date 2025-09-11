@@ -1,0 +1,37 @@
+/* Animated multi-color gradient ring */
+@keyframes ring-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.ring-animation {
+  position: relative;
+  border-radius: 1rem;
+  padding: 4px; /* ring thickness */
+  background: linear-gradient(
+    270deg,
+    #000428,   /* dark blue/black */
+    #004e92,   /* blue */
+    #00c6ff,   /* cyan */
+    #6a11cb,   /* purple */
+    #ff416c,   /* pink */
+    #fbc2eb,   /* light pink */
+    #000428    /* repeat dark blue */
+  );
+  background-size: 600% 600%; /* bigger to make movement smooth */
+  animation: ring-move 8s ease infinite; /* slower and smoother */
+}
+
+.ring-animation > * {
+  border-radius: 0.75rem; /* inner card rounded */
+  background-color: white; /* inner card stays white */
+  height: 100%;
+  width: 100%;
+}

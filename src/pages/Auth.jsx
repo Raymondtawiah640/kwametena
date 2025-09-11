@@ -1,22 +1,26 @@
 import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
+import { FaUserPlus, FaSignInAlt } from "react-icons/fa"; // icons for links
+import "./styles/Auth.css";
 
 function Auth() {
   const [isLogin, setIsLogin] = useState(true);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="relative w-full max-w-4xl bg-white rounded-xl shadow-xl overflow-hidden flex">
+      <div className="relative w-full max-w-4xl bg-white rounded-xl overflow-hidden flex flex-col md:flex-row
+                      md:items-stretch
+                      ring-animation">
 
-        {/* Slanted Divider */}
-        <div className="absolute top-0 left-1/2 h-full w-1 bg-blue-700 transform -translate-x-1/2 rotate-6 z-10"></div>
+        {/* Slanted Divider (desktop only) */}
+        <div className="hidden md:block absolute top-0 left-1/2 h-full w-1 bg-blue-700 transform -translate-x-1/2 rotate-6 z-10"></div>
 
         {/* Forms Container */}
-        <div className="flex w-full relative">
+        <div className="flex flex-col md:flex-row w-full relative">
 
           {/* Login Form */}
           <div
-            className={`w-1/2 p-10 transition-all duration-500 ${
+            className={`w-full md:w-1/2 p-10 transition-all duration-500 ${
               isLogin ? "opacity-100 z-20 pointer-events-auto" : "opacity-50 z-10 pointer-events-none"
             }`}
           >
@@ -24,8 +28,8 @@ function Auth() {
             <form className="flex flex-col space-y-4">
               <input type="email" placeholder="Email" className="p-3 border border-gray-300 rounded-lg"/>
               <input type="password" placeholder="Password" className="p-3 border border-gray-300 rounded-lg"/>
-              <button className="p-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition">
-                Login
+              <button className="p-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition flex items-center justify-center">
+                <FaSignInAlt className="mr-2" /> Login
               </button>
             </form>
 
@@ -37,20 +41,20 @@ function Auth() {
               Sign in with Google
             </button>
 
-            <p className="mt-4 text-gray-600">
+            <p className="mt-4 text-gray-600 flex items-center">
               Don’t have an account?{" "}
               <button
-                className="text-blue-600 font-bold hover:underline"
+                className="text-blue-600 font-bold hover:underline flex items-center ml-2"
                 onClick={() => setIsLogin(false)}
               >
-                Sign Up
+                <FaUserPlus className="mr-1" /> Sign Up
               </button>
             </p>
           </div>
 
           {/* Signup Form */}
           <div
-            className={`w-1/2 p-10 transition-all duration-500 ${
+            className={`w-full md:w-1/2 p-10 transition-all duration-500 ${
               isLogin ? "opacity-50 z-10 pointer-events-none" : "opacity-100 z-20 pointer-events-auto"
             }`}
           >
@@ -59,18 +63,18 @@ function Auth() {
               <input type="text" placeholder="Full Name" className="p-3 border border-gray-300 rounded-lg"/>
               <input type="email" placeholder="Email" className="p-3 border border-gray-300 rounded-lg"/>
               <input type="password" placeholder="Password" className="p-3 border border-gray-300 rounded-lg"/>
-              <button className="p-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition">
-                Sign Up
+              <button className="p-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition flex items-center justify-center">
+                <FaUserPlus className="mr-2" /> Sign Up
               </button>
             </form>
 
-            <p className="mt-4 text-gray-600">
+            <p className="mt-4 text-gray-600 flex items-center">
               Already have an account?{" "}
               <button
-                className="text-blue-600 font-bold hover:underline"
+                className="text-blue-600 font-bold hover:underline flex items-center ml-2"
                 onClick={() => setIsLogin(true)}
               >
-                Login
+                <FaSignInAlt className="mr-1" /> Login
               </button>
             </p>
           </div>
