@@ -1,0 +1,80 @@
+/* ========================= */
+/* Heading wave animation */
+/* ========================= */
+@keyframes waveLetters {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateY(-10px); }
+  50%  { transform: translateY(0); }
+  75%  { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Each letter in the heading will wave */
+.slide-in-heading span {
+  display: inline-block;
+  animation: waveLetters 2s ease-in-out infinite;
+}
+
+/* Delay each letter so it looks like a water wave */
+.slide-in-heading span:nth-child(1) { animation-delay: 0s; }
+.slide-in-heading span:nth-child(2) { animation-delay: 0.1s; }
+.slide-in-heading span:nth-child(3) { animation-delay: 0.2s; }
+.slide-in-heading span:nth-child(4) { animation-delay: 0.3s; }
+.slide-in-heading span:nth-child(5) { animation-delay: 0.4s; }
+.slide-in-heading span:nth-child(6) { animation-delay: 0.5s; }
+.slide-in-heading span:nth-child(7) { animation-delay: 0.6s; }
+/* Keep adding nth-child for longer words */
+
+/* ========================= */
+/* Paragraph animation */
+/* ========================= */
+@keyframes fadeInOut {
+  0%   { opacity: 0; }
+  20%  { opacity: 1; }
+  70%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.fade-in-text {
+  animation: fadeInOut 5s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+/* ========================= */
+/* Hero wave background */
+/* ========================= */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 120px;
+  overflow: hidden;
+}
+
+.hero-wave::before,
+.hero-wave::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 120px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='200' viewBox='0 0 1600 200'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0,64L80,58.7C160,53,320,43,480,64C640,85,800,139,960,144C1120,149,1280,107,1440,74.7C1600,43,1760,21,1920,16L1920,200L0,200Z'%3E%3C/path%3E%3C/svg%3E") repeat-x;
+  background-size: cover;
+  animation: waveMove 8s linear infinite;
+}
+
+.hero-wave::after {
+  animation: waveMove 8s linear infinite;
+  animation-delay: -4s;
+  opacity: 0.6;
+}
+
+@keyframes waveMove {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
