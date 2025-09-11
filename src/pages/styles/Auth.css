@@ -17,21 +17,21 @@
   padding: 4px; /* ring thickness */
   background: linear-gradient(
     270deg,
-    #000428,   /* dark blue/black */
-    #004e92,   /* blue */
-    #00c6ff,   /* cyan */
-    #6a11cb,   /* purple */
-    #ff416c,   /* pink */
-    #fbc2eb,   /* light pink */
-    #000428    /* repeat dark blue */
+    #000428,
+    #004e92,
+    #00c6ff,
+    #6a11cb,
+    #ff416c,
+    #fbc2eb,
+    #000428
   );
-  background-size: 600% 600%; /* bigger to make movement smooth */
-  animation: ring-move 8s ease infinite; /* slower and smoother */
+  background-size: 600% 600%;
+  animation: ring-move 8s ease infinite;
 }
 
 .ring-animation > * {
-  border-radius: 0.75rem; /* inner card rounded */
-  background-color: white; /* inner card stays white */
+  border-radius: 0.75rem;
+  background-color: white;
   height: 100%;
   width: 100%;
 }

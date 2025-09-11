@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { FaUserPlus, FaSignInAlt, FaKey } from "react-icons/fa"; // added FaKey for forgot password icon
+import { FaUserPlus, FaSignInAlt, FaKey } from "react-icons/fa";
 import "./styles/Auth.css";
 
 function Auth() {
@@ -8,24 +8,15 @@ function Auth() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div
-        className="relative w-full max-w-4xl bg-white rounded-xl overflow-hidden flex flex-col md:flex-row
-                      md:items-stretch
-                      ring-animation"
-      >
-        {/* Slanted Divider (desktop only) */}
-        <div className="hidden md:block absolute top-0 left-1/2 h-full w-1 bg-blue-700 transform -translate-x-1/2 rotate-6 z-10"></div>
-
-        {/* Forms Container */}
-        <div className="flex flex-col md:flex-row w-full relative">
+      <div className="relative w-full max-w-4xl bg-white rounded-xl overflow-hidden ring-animation">
+        {/* Forms wrapper (handles sliding animation) */}
+        <div
+          className={`flex w-[200%] transition-transform duration-700 ease-in-out ${
+            isLogin ? "translate-x-0" : "-translate-x-1/2"
+          }`}
+        >
           {/* Login Form */}
-          <div
-            className={`w-full md:w-1/2 p-10 transition-all duration-500 ${
-              isLogin
-                ? "opacity-100 z-20 pointer-events-auto"
-                : "opacity-50 z-10 pointer-events-none"
-            }`}
-          >
+          <div className="w-1/2 p-10 flex flex-col justify-center">
             <h2 className="text-3xl font-bold mb-6 text-gray-800">Login</h2>
             <form className="flex flex-col space-y-4">
               <input
@@ -39,7 +30,7 @@ function Auth() {
                 className="p-3 border border-gray-300 rounded-lg"
               />
 
-              {/* Forgot Password Link */}
+              {/* Forgot Password */}
               <button
                 type="button"
                 className="text-blue-600 text-sm font-semibold hover:underline flex items-center self-end"
@@ -53,6 +44,7 @@ function Auth() {
               </button>
             </form>
 
+            {/* Google Login */}
             <button
               className="mt-4 flex items-center justify-center p-3 border border-gray-300 rounded-lg hover:shadow-lg transition"
               onClick={() => alert("Google login clicked!")}
@@ -62,7 +54,7 @@ function Auth() {
             </button>
 
             <p className="mt-4 text-gray-600 flex items-center">
-              Don’t have an account?{" "}
+              Don’t have an account?
               <button
                 className="text-blue-600 font-bold hover:underline flex items-center ml-2"
                 onClick={() => setIsLogin(false)}
@@ -73,13 +65,7 @@ function Auth() {
           </div>
 
           {/* Signup Form */}
-          <div
-            className={`w-full md:w-1/2 p-10 transition-all duration-500 ${
-              isLogin
-                ? "opacity-50 z-10 pointer-events-none"
-                : "opacity-100 z-20 pointer-events-auto"
-            }`}
-          >
+          <div className="w-1/2 p-10 flex flex-col justify-center">
             <h2 className="text-3xl font-bold mb-6 text-gray-800">Sign Up</h2>
             <form className="flex flex-col space-y-4">
               <input
@@ -103,7 +89,7 @@ function Auth() {
             </form>
 
             <p className="mt-4 text-gray-600 flex items-center">
-              Already have an account?{" "}
+              Already have an account?
               <button
                 className="text-blue-600 font-bold hover:underline flex items-center ml-2"
                 onClick={() => setIsLogin(true)}
