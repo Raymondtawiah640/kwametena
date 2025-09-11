@@ -1,21 +1,13 @@
 import React from "react";
-import backImage from "../assets/images/back.png";
-import campusImage from "../assets/images/campus.png";
-import codingImage from "../assets/images/coding.png";
-import contentImage from "../assets/images/content.png";
-import designImage from "../assets/images/design.png";
-import jhsImage from "../assets/images/jhs.png";
-import tenalearnImage from "../assets/images/tenalearn.png";
 
 function Home() {
   return (
     <div className="flex flex-col items-center justify-center bg-gray-100 w-full">
-
       {/* Hero Section */}
       <div className="flex flex-col md:flex-row items-center justify-center min-h-screen p-6 bg-gray-100 gap-8 w-full">
         {/* Left: Image */}
         <img
-          src={backImage}
+          src="/images/back.png"
           alt="Background"
           className="w-full md:w-1/2 rounded-lg shadow-lg"
         />
@@ -26,10 +18,11 @@ function Home() {
             Welcome to E-Learning
           </h1>
           <p className="text-gray-700 text-lg">
-            Learn and grow with our interactive online courses. Explore different topics, improve your skills, and achieve your goals.
+            Learn and grow with our interactive online courses. Explore
+            different topics, improve your skills, and achieve your goals.
           </p>
         </div>
-      </div> {/* <-- Close Hero Section */}
+      </div>
 
       {/* Features Section */}
       <div className="py-16 w-full bg-white">
@@ -38,19 +31,25 @@ function Home() {
         </h2>
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <div className="flex flex-col items-center p-4 bg-gray-50 rounded-lg shadow hover:shadow-lg transition">
-            <img src={codingImage} alt="Coding" className="w-24 h-24 mb-4" />
+            <img src="/images/coding.png" alt="Coding" className="w-24 h-24 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Coding Courses</h3>
-            <p className="text-gray-600 text-center">Learn programming languages and build projects.</p>
+            <p className="text-gray-600 text-center">
+              Learn programming languages and build projects.
+            </p>
           </div>
           <div className="flex flex-col items-center p-4 bg-gray-50 rounded-lg shadow hover:shadow-lg transition">
-            <img src={designImage} alt="Design" className="w-24 h-24 mb-4" />
+            <img src="/images/design.png" alt="Design" className="w-24 h-24 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Design Courses</h3>
-            <p className="text-gray-600 text-center">Master UI/UX and graphic design skills.</p>
+            <p className="text-gray-600 text-center">
+              Master UI/UX and graphic design skills.
+            </p>
           </div>
           <div className="flex flex-col items-center p-4 bg-gray-50 rounded-lg shadow hover:shadow-lg transition">
-            <img src={contentImage} alt="Content" className="w-24 h-24 mb-4" />
+            <img src="/images/content.png" alt="Content" className="w-24 h-24 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Content Creation</h3>
-            <p className="text-gray-600 text-center">Learn how to create engaging content online.</p>
+            <p className="text-gray-600 text-center">
+              Learn how to create engaging content online.
+            </p>
           </div>
         </div>
       </div>
@@ -62,14 +61,18 @@ function Home() {
         </h2>
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8">
           <div className="flex flex-col items-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition">
-            <img src={jhsImage} alt="JHS" className="w-32 h-32 mb-4" />
+            <img src="/images/jhs.png" alt="JHS" className="w-32 h-32 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Junior High School</h3>
-            <p className="text-gray-600 text-center">Courses designed for junior high school students.</p>
+            <p className="text-gray-600 text-center">
+              Courses designed for junior high school students.
+            </p>
           </div>
           <div className="flex flex-col items-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition">
-            <img src={tenalearnImage} alt="Tenalearn" className="w-32 h-32 mb-4" />
+            <img src="/images/tenalearn.png" alt="Tenalearn" className="w-32 h-32 mb-4" />
             <h3 className="text-xl font-semibold mb-2">TenaLearn</h3>
-            <p className="text-gray-600 text-center">Our flagship online learning platform for advanced students.</p>
+            <p className="text-gray-600 text-center">
+              Our flagship online learning platform for advanced students.
+            </p>
           </div>
         </div>
       </div>
@@ -80,12 +83,11 @@ function Home() {
           Our Campus
         </h2>
         <img
-          src={campusImage}
+          src="/images/campus.png"
           alt="Campus"
           className="w-full max-w-4xl rounded-lg shadow-lg"
         />
       </div>
-
     </div>
   );
 }

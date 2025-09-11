@@ -6,25 +6,25 @@ const jhsCourses = [
     id: 1,
     title: "JHS Math Mastery",
     description: "Understand all the key topics in JHS Math with exercises.",
-    image: "/assets/jhs-Cbd-QsDV.png",
+    image: "/images/content.png",
   },
   {
     id: 2,
     title: "JHS Science Fundamentals",
     description: "Learn physics, chemistry, and biology basics for JHS.",
-    image: "/assets/content-D2u4VqTy.png",
+    image: "/images/coding.png",
   },
   {
     id: 3,
     title: "JHS English Language",
     description: "Improve grammar, comprehension, and writing skills.",
-    image: "/assets/design-CpegINc5.png",
+    image: "/images/campus.png",
   },
   {
     id: 4,
     title: "JHS ICT & Coding",
     description: "Learn basic coding and ICT skills for exams and projects.",
-    image: "/assets/coding-CPPGxj1s.png",
+    image: "/images/design.png",
   },
 ];
 
