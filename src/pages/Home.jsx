@@ -68,7 +68,7 @@ function Home() {
             </p>
           </div>
           <div className="flex flex-col items-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition">
-            <img src="/images/tenalearn.png" alt="Tenalearn" className="w-32 h-32 mb-4" />
+            <img src="/images/TENALEARN.png" alt="Tenalearn" className="w-32 h-32 mb-4" />
             <h3 className="text-xl font-semibold mb-2">TenaLearn</h3>
             <p className="text-gray-600 text-center">
               Our flagship online learning platform for advanced students.
