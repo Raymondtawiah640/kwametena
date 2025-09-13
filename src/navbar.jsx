@@ -5,13 +5,14 @@ import { FaHome, FaInfoCircle, FaEnvelope, FaSignInAlt, FaBook } from "react-ico
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
- const links = [
+     const links = [
   { to: "/", label: "Home", icon: <FaHome className="inline mr-2" /> },
   { to: "/about", label: "About", icon: <FaInfoCircle className="inline mr-2" /> },
+  { to: "/courses", label: "Courses", icon: <FaBook className="inline mr-2" /> },
   { to: "/contact", label: "Contact", icon: <FaEnvelope className="inline mr-2" /> },
   { to: "/auth", label: "Login / Sign Up", icon: <FaSignInAlt className="inline mr-2" /> },
-  { to: "/courses", label: "Courses", icon: <FaBook className="inline mr-2" /> },
 ];
+
 
   return (
     <nav className="bg-gray-900 text-white relative z-50">

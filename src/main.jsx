@@ -13,14 +13,16 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        {/* App is the layout with Navbar + Outlet */}
+        {/* All pages that use Navbar + Footer */}
         <Route path="/" element={<App />}>
-          <Route index element={<Home />} />        {/* / */}
-          <Route path="about" element={<About />} />   {/* /about */}
-          <Route path="courses" element={<Courses />} /> {/* /courses */}
-          <Route path="contact" element={<Contact />} /> {/* /contact */}
-          <Route path="auth" element={<Auth />} />       {/* /auth */}
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="courses" element={<Courses />} />
+          <Route path="contact" element={<Contact />} />
         </Route>
+
+        {/* ✅ Auth page outside App layout (no Navbar/Footer) */}
+        <Route path="/auth" element={<Auth />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
